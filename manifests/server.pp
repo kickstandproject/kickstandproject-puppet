@@ -3,6 +3,8 @@ class puppet::server(
   $monitor  = true,
   $options  = {},
 ) {
+  require common::client
+
   $defaults = {
     'dbadapter'     => 'mysql',
     'dbname'        => 'puppet',

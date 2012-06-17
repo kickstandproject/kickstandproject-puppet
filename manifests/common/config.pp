@@ -7,7 +7,6 @@ class puppet::common::config {
 
   file { $puppet::params::basedir:
     ensure  => directory,
-    require => Class['puppet::common::install'],
   }
 
   common::function::concat { $puppet::params::configfile: }
