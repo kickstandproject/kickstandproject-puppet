@@ -1,0 +1,6 @@
+fixtures:
+  repositories:
+    'common': 'git://github.com/kickstandproject/kickstandproject-common.git'
+    'stdlib': 'git://github.com/puppetlabs/puppetlabs-stdlib.git'
+  symlinks:
+    'puppet': '#{source_dir}'
