@@ -41,6 +41,15 @@ describe 'puppet::client', :type => :class do
     end
 
     it do
+      should contain_file('/etc/default/puppet').with({
+        'ensure'  => 'file',
+        'group'   => 'root',
+        'mode'    => '0644',
+        'owner'   => 'root',
+      })
+    end
+
+    it do
       should contain_package('puppet').with_ensure('present')
     end
 

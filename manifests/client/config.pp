@@ -10,7 +10,10 @@ class puppet::client::config {
   file { $puppet::params::client::defaultsfile:
     ensure  => file,
     content => template('puppet/etc/default/puppet.erb'),
+    group   => $puppet::params::group,
+    mode    => $puppet::params::mode,
     notify  => Class['puppet::client::service'],
+    owner   => $puppet::params::owner,
     require => Class['puppet::client::install'],
   }
 }

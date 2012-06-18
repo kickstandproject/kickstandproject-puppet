@@ -23,7 +23,7 @@ class puppet::server(
   include puppet::params::server
   include puppet::server::init
 
-  common::function::database { $puppet::params::server::packagename:
+  common::function::database { $name:
     password  => $options_real['dbpassword'],
     server    => $options_real['dbserver'],
     table     => $options_real['dbname'],

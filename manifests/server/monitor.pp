@@ -1,6 +1,7 @@
 class puppet::server::monitor {
   monitor::function::process { $name:
-    process => $puppet::params::sever::processname,
+    description => 'Puppet Master',
+    process     => $puppet::params::server::processname,
   }
 }
 
