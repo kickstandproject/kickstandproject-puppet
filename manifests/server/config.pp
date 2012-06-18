@@ -1,9 +1,11 @@
 class puppet::server::config {
+  require apache::server
   include puppet::common::config
 
   common::function::concat::fragment { 'puppet.conf-server':
     target  => $puppet::params::server::configfile,
     content => template('puppet/etc/puppet/puppet.conf-server.erb'),
+    notify  => Class['apache::server::service'],
     order   => 02,
   }
 }
