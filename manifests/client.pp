@@ -1,6 +1,6 @@
 class puppet::client(
   $enable   = true,
-  $monitor  = true,
+  $monitor  = false,
   $options  = {},
 ) {
   require common::client

@@ -7,6 +7,9 @@ class puppet::common::config {
 
   file { $puppet::params::basedir:
     ensure  => directory,
+    force   => true,
+    purge   => true,
+    recurse => true,
   }
 
   common::function::concat { $puppet::params::configfile: }
