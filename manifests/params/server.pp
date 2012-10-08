@@ -12,11 +12,7 @@ class puppet::params::server inherits puppet::params {
   }
 
   $packagename = $::operatingsystem ? {
-    default => [
-      'puppetmaster-passenger',
-      'ruby-activerecord',
-      'ruby-mysql'
-    ],
+    default => 'puppetmaster-passenger',
   }
 
   $processname = $::operatingsystem ? {

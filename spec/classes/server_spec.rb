@@ -8,14 +8,6 @@ describe 'puppet::server', :type => :class do
       :operatingsystem  => 'Ubuntu',
     } }
 
-    let(:params) { {
-      :monitor  => false,
-      :options  => {
-        'dbadapter'   => 'sqlite3',
-        'dbpassword'  => 'secret',
-      },
-    } }
-
     it do
       should_not contain_class('puppet::server::monitor')
     end
@@ -46,15 +38,8 @@ describe 'puppet::server', :type => :class do
       })
     end
 
-    packages = [
-      'puppetmaster-passenger',
-      'ruby-activerecord',
-      'ruby-mysql',
-    ]
-    packages.each do |p|
-      it do
-        should contain_package(p).with_ensure('present')
-      end
+    it do
+      should contain_package('puppetmaster-passenger').with_ensure('present')
     end
   end
 end

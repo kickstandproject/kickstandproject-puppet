@@ -8,8 +8,6 @@ describe 'puppet::client', :type => :class do
       :operatingsystem  => 'Ubuntu',
     } }
 
-    let(:params) { { :monitor => false } }
-
     it do
       should_not contain_class('puppet::client::monitor')
     end
@@ -65,7 +63,6 @@ describe 'puppet::client', :type => :class do
     context 'service disabled' do
       let(:params) { {
         :enable   => false,
-        :monitor  => false,
       } }
       it do
         should contain_service('puppet').with({
