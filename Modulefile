@@ -1,5 +1,5 @@
 name    'kickstandproject-puppet'
-version '0.0.3'
+version '0.0.4'
 author 'Paul Belanger'
 license 'GPLv2'
 summary 'UNKNOWN'
