@@ -1,5 +1,5 @@
 [master]
-<%- scope.lookupvar('puppet::server::options').sort.each do |key,val| -%>
+<%- scope.lookupvar('puppet::server::options_real').sort.each do |key,val| -%>
 <%= key %> = <%= val %>
 <%- end -%>
 
