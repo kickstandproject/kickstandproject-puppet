@@ -23,12 +23,8 @@ class puppet::server::config {
     order   => 02,
   }
 
-  # TODO: Clean this up into a function
-  file { "${apache::params::virtualhostdir}/puppetmaster.conf":
-    ensure  => file,
+  apache::function::site::available { $::fqdn:
     content => template('puppet/etc/apache2/conf.d/puppetmaster.conf.erb'),
-    notify  => Class['apache::common::service'],
-    require => File[$apache::params::virtualhostdir],
   }
 }
 
