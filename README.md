@@ -1,20 +1,18 @@
 # kickstandproject-puppet
+
 [![Build Status](https://secure.travis-ci.org/kickstandproject/kickstandproject-puppet.png)](http://travis-ci.org/kickstandproject/kickstandproject-puppet)
 
-## Usage
-
-    class { 'puppet::server': }
-
 # License
-Copyright (C) 2012, PolyBeacon, Inc.
-Paul Belanger <paul.belanger@polybeacon.com>
+Copyright 2012 PolyBeacon, Inc.
 
-See http://kickstand-project.org for more information about
-the Kickstand project. Please do not directly contact any
-of the maintainers of this project for assistance; the
-project provides a web site, forums and IRC channels for
-your use.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-This program is free software, distributed under the terms
-of the GNU General Public License Version 2. See the LICENSE
-file at the top of the source tree.
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
