@@ -22,6 +22,10 @@ class puppet::server::config {
     notify  => Class['apache::common::service'],
     order   => 02,
   }
+
+  apache::function::virtualhost { $::fqdn:
+    content => template('puppet/etc/apache2/conf.d/puppetmaster.conf.erb')
+  }
 }
 
 # vim:sw=2:ts=2:expandtab:textwidth=79
