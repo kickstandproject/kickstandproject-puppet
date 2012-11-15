@@ -26,7 +26,7 @@ class puppet::server::config {
   # TODO: Clean this up into a function
   file { "${apache::params::virtualhostdir}/puppetmaster.conf":
     ensure  => file,
-    content => template('puppet/etc/apache2/conf.d/puppetmaster.conf.erb')
+    content => template('puppet/etc/apache2/conf.d/puppetmaster.conf.erb'),
     notify  => Class['apache::common::service'],
     require => File[$apache::params::virtualhostdir],
   }
