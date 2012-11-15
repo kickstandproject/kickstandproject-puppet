@@ -19,15 +19,15 @@
 # the top of the source tree.
 #
 class puppet::server(
-  $enable   = true,
-  $monitor  = false,
-  $options  = {},
+  $enable  = true,
+  $monitor = false,
+  $options = {},
 ) {
   require common::client
 
   $defaults = {
-    'ssl_client_header'         => 'SSL_CLIENT_S_DN',
-    'ssl_client_verify_header'  => 'SSL_CLIENT_VERIFY',
+    'ssl_client_header'        => 'SSL_CLIENT_S_DN',
+    'ssl_client_verify_header' => 'SSL_CLIENT_VERIFY',
   }
 
   $options_real = merge($defaults, $options)

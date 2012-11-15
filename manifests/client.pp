@@ -19,9 +19,9 @@
 # the top of the source tree.
 #
 class puppet::client(
-  $enable   = true,
-  $monitor  = false,
-  $options  = {},
+  $enable  = true,
+  $monitor = false,
+  $options = {},
 ) {
   require common::client
 

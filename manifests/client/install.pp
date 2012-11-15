@@ -14,7 +14,7 @@
 #
 class puppet::client::install {
   package { $puppet::params::client::packagename:
-    ensure  => present,
+    ensure => present,
   }
 }
 

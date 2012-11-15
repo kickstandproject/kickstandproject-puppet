@@ -14,7 +14,7 @@
 #
 class puppet::server::install {
   package { $puppet::params::server::packagename:
-    ensure  => present,
+    ensure => present,
   }
 }
 
