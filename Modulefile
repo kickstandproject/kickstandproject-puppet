@@ -1,5 +1,5 @@
 name    'kickstandproject-puppet'
-version '0.0.6'
+version '0.0.7'
 author 'kickstandproject'
 license 'Apache 2.0'
 summary 'UNKNOWN'
