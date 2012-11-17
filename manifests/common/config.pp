@@ -13,12 +13,6 @@
 # the top of the source tree.
 #
 class puppet::common::config {
-  File {
-    group => $puppet::params::group,
-    mode  => $puppet::params::mode,
-    owner => $puppet::params::owner,
-  }
-
   file { $puppet::params::basedir:
     ensure  => directory,
     force   => true,

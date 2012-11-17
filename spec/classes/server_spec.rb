@@ -31,6 +31,15 @@ describe 'puppet::server', :type => :class do
     end
 
     it do
+      should contain_file('/etc/puppet/autosign.conf').with({
+        'ensure'  => 'file',
+        'group'   => 'root',
+        'mode'    => '0644',
+        'owner'   => 'root',
+      })
+    end
+
+    it do
       should contain_file('/etc/puppet/puppet.conf').with({
         'group'   => 'root',
         'mode'    => '0644',

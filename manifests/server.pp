@@ -19,7 +19,8 @@
 # the top of the source tree.
 #
 class puppet::server(
-  $enable  = true,
+  $autosign = [],
+  $enable = true,
   $monitor = false,
   $options = {},
 ) {

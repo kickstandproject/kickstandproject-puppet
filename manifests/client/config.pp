@@ -15,6 +15,12 @@
 class puppet::client::config {
   include puppet::common::config
 
+  File {
+    group => $puppet::params::group,
+    mode  => $puppet::params::mode,
+    owner => $puppet::params::owner,
+  }
+
   common::function::concat::fragment { 'puppet.conf-client':
     target  => $puppet::params::client::configfile,
     content => template('puppet/etc/puppet/puppet.conf-client.erb'),
