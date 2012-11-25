@@ -1,7 +1,5 @@
 # kickstandproject-puppet
 
-[![Build Status](https://secure.travis-ci.org/kickstandproject/kickstandproject-puppet.png)](http://travis-ci.org/kickstandproject/kickstandproject-puppet)
-
 # License
 Copyright 2012 PolyBeacon, Inc.
 
