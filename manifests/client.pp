@@ -26,10 +26,10 @@ class puppet::client(
   require common::client
 
   $defaults = {
-    'pluginsync'        => 'true',
+    'pluginsync'        => true,
     'runinterval'       => '1800',
     'server'            => 'localhost',
-    'usecacheonfailure' => 'false',
+    'usecacheonfailure' => false,
   }
 
   $options_real = merge($defaults, $options)
