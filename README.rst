@@ -1,6 +1,10 @@
-# kickstandproject-puppet
+=======================
+kickstandproject-puppet
+=======================
 
-# License
+License
+=======
+
 Copyright 2012 PolyBeacon, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
