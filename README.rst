@@ -2,6 +2,11 @@
 kickstandproject-puppet
 =======================
 
+Usage
+=====
+
+  class { 'puppet::server': }
+
 License
 =======
 
