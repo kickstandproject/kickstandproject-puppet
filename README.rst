@@ -1,5 +1,5 @@
 =======================
-kickstandproject-puppet
+kickstandproject-puppet!
 =======================
 
 License
