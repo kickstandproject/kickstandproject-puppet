@@ -28,10 +28,6 @@ class puppet::params::server inherits puppet::params {
   $packagename = $::operatingsystem ? {
     default => 'puppetmaster-passenger',
   }
-
-  $servicename = $::operatingsystem ? {
-    default => 'puppetmaster',
-  }
 }
 
 # vim:sw=2:ts=2:expandtab

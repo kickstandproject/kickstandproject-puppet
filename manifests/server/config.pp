@@ -35,9 +35,17 @@ class puppet::server::config {
     require => File[$puppet::params::server::basedir],
   }
 
+  file { "${puppet::params::server::basedir}/hieradata":
+    ensure  => directory,
+    group   => $puppet::params::group,
+    mode    => $puppet::params::mode,
+    require => File[$puppet::params::server::basedir],
+    owner   => $puppet::params::owner,
+  }
+
   apache::function::site::available { $::fqdn:
     content => template('puppet/etc/apache2/conf.d/puppetmaster.conf.erb'),
   }
 }
 
-# vim:sw=2:ts=2:expandtab:textwidth=79
+# vim:sw=2:ts=2:expandtab
