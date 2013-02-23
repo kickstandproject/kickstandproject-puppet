@@ -22,8 +22,6 @@ class puppet::client(
   $enable  = true,
   $options = {},
 ) {
-  require common::client
-
   $defaults = {
     'pluginsync'        => true,
     'runinterval'       => '1800',

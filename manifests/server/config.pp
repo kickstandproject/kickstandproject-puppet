@@ -22,11 +22,11 @@ class puppet::server::config {
     owner => $puppet::params::owner,
   }
 
-  common::function::concat::fragment { 'puppet.conf-server':
-    target  => $puppet::params::server::configfile,
+  concat::fragment { 'puppet.conf-server':
     content => template('puppet/etc/puppet/puppet.conf-server.erb'),
     notify  => Class['apache::common::service'],
     order   => 02,
+    target  => $puppet::params::server::configfile,
   }
 
   file { "${puppet::params::server::basedir}/autosign.conf":

@@ -21,10 +21,10 @@ class puppet::client::config {
     owner => $puppet::params::owner,
   }
 
-  common::function::concat::fragment { 'puppet.conf-client':
-    target  => $puppet::params::client::configfile,
+  concat::fragment { 'puppet.conf-client':
     content => template('puppet/etc/puppet/puppet.conf-client.erb'),
     order   => 03,
+    target  => $puppet::params::client::configfile,
   }
 
   file { $puppet::params::client::defaultsfile:
@@ -38,4 +38,4 @@ class puppet::client::config {
   }
 }
 
-# vim:sw=2:ts=2:expandtab:textwidth=79
+# vim:sw=2:ts=2:expandtab

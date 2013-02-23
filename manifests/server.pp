@@ -23,8 +23,6 @@ class puppet::server(
   $enable = true,
   $options = {},
 ) {
-  require common::client
-
   $defaults = {
     'ssl_client_header'        => 'SSL_CLIENT_S_DN',
     'ssl_client_verify_header' => 'SSL_CLIENT_VERIFY',

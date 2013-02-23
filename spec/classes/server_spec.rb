@@ -3,9 +3,10 @@ require 'spec_helper'
 describe 'puppet::server', :type => :class do
   context 'on Ubuntu 12.04 (Precise)' do
     let(:facts) { { 
-      :lsbdistcodename  => 'precise',
-      :lsbdistrelease   => '12.04',
-      :operatingsystem  => 'Ubuntu',
+      :lsbdistcodename => 'precise',
+      :lsbdistrelease  => '12.04',
+      :operatingsystem => 'Ubuntu',
+      :concat_basedir  => '/var/lib/puppet/concat',
     } }
 
     directories = [
