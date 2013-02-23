@@ -8,10 +8,6 @@ describe 'puppet::server', :type => :class do
       :operatingsystem  => 'Ubuntu',
     } }
 
-    it do
-      should_not contain_class('puppet::server::monitor')
-    end
-
     directories = [
       '/etc/puppet',
       '/etc/puppet/modules',
@@ -53,4 +49,4 @@ describe 'puppet::server', :type => :class do
   end
 end
 
-# vim:sw=2:ts=2:expandtab:textwidth=79
+# vim:sw=2:ts=2:expandtab

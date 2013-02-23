@@ -20,7 +20,6 @@
 #
 class puppet::client(
   $enable  = true,
-  $monitor = false,
   $options = {},
 ) {
   require common::client
@@ -38,4 +37,4 @@ class puppet::client(
   include puppet::client::init
 }
 
-# vim:sw=2:ts=2:expandtab:textwidth=79
+# vim:sw=2:ts=2:expandtab
