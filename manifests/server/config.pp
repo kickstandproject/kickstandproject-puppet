@@ -35,12 +35,6 @@ class puppet::server::config {
     require => File[$puppet::params::server::basedir],
   }
 
-  file { "${puppet::params::server::basedir}/fileserver.conf":
-    ensure  => file,
-    content => template('puppet/etc/puppet/fileserver.conf.erb'),
-    require => File[$puppet::params::server::basedir],
-  }
-
   apache::function::site::available { $::fqdn:
     content => template('puppet/etc/apache2/conf.d/puppetmaster.conf.erb'),
   }
