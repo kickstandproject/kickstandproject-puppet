@@ -45,7 +45,7 @@ describe 'puppet::server', :type => :class do
     end
 
     it do
-      should contain_package('puppetmaster-passenger').with_ensure('present')
+      should contain_package('puppetmaster').with_ensure('present')
     end
   end
 end

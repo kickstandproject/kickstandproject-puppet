@@ -13,7 +13,7 @@
 # the top of the source tree.
 #
 class puppet::server::config {
-  require apache::server
+  require puppet::server::install
   include puppet::common::config
 
   File {
@@ -24,7 +24,7 @@ class puppet::server::config {
 
   concat::fragment { 'puppet.conf-server':
     content => template('puppet/etc/puppet/puppet.conf-server.erb'),
-    notify  => Class['apache::common::service'],
+    notify  => Class['puppet::server::service'],
     order   => 02,
     target  => $puppet::params::server::configfile,
   }
@@ -41,10 +41,6 @@ class puppet::server::config {
     mode    => $puppet::params::mode,
     require => File[$puppet::params::server::basedir],
     owner   => $puppet::params::owner,
-  }
-
-  apache::function::site::available { $::fqdn:
-    content => template('puppet/etc/apache2/conf.d/puppetmaster.conf.erb'),
   }
 }
 
