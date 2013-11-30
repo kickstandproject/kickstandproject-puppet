@@ -26,7 +26,11 @@ class puppet::params::server inherits puppet::params {
   }
 
   $packagename = $::operatingsystem ? {
-    default => 'puppetmaster-passenger',
+    default => 'puppetmaster',
+  }
+
+  $servicename = $::operatingsystem ? {
+    default => 'puppetmaster',
   }
 }
 
